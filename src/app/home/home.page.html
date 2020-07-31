@@ -1,20 +1,54 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title style="text-align: center;">
+    Online Shopping
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+<!-- <ion-button (click)="addData()">Init Data</ion-button>
+<ion-label>{{pic.length}}</ion-label>  -->
+<div class="category-block">
+   
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+    <div class="slidePrev" (click)="slidePrev()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </div>
+  </ion-col>
+  <ion-col size="10">
+    <ion-slides [options]="sliderConfig" >
+      <ion-slide *ngFor="let pic of pic" >
+                 <ion-card class="ion-card">
+              <ion-card-content>
+                <ion-card-title class="favr">
+                  <ion-icon name="heart-outline"></ion-icon>              
+                </ion-card-title>
+                <img [src]="pic.Url">
+                <ion-card-title class="name">
+                  {{ pic.Description }} 
+                </ion-card-title>
+                <ion-card-title class="rating-row">
+                    <rating class="rating" [(ngModel)]="rate"  readonly="false" size="default" (ngModelChange)="onRateChange($event)"></rating>
+                    <ion-icon class="truck" name="bus-outline"></ion-icon>
+                </ion-card-title>                
+                <ion-card-title class="price" >
+                  ₹{{pic.Price}}
+                </ion-card-title>  
+              </ion-card-content> 
+          </ion-card>   
+          </ion-slide>
+    </ion-slides>
+  </ion-col>
+  <ion-col size="1">
+    <div class="slideNext" (click)="slideNext()">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+  </ion-col>
+  </ion-row>
+</ion-grid> 
+</div>
 </ion-content>
+

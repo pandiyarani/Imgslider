@@ -24,3 +24,29 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+rating {
+
+  width:90%;
+  float: left;
+
+  ion-icon {
+
+    width:90%;
+    padding: 0;
+    margin: 0;
+  color: gray;
+  color: #47b6b1;
+   
+  &.outline {
+    color: pink;   
+  }
+  
+  &.filled {
+   fill: #47b6b1;
+  }
+}
+}
+
+  

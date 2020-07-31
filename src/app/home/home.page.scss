@@ -1,27 +1,113 @@
-#container {
-  text-align: center;
 
+ion-badge {
+  color: #fff;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0px;
+  right: 0px;
+  border-radius: 100%;  
+ 
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.ion-card
+{
+  box-shadow: none;
+  border-radius: 0;
+  border-right: 1px solid #47b6b1;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.category-block {
+  margin-bottom: 4px;
+  position: relative;        
 }
 
-#container a {
-  text-decoration: none;
+
+.category-banner {
+  border-left: 8px solid var(--ion-color-secondary);
+  background: var(--ion-color-light);
+  height: 40px;
+  padding: 10px;
+  font-weight: 500; 
+  color:#36837f;
+  font-family: 'Roboto',sans-serif !important;
+font-weight: bold;
+font-size: larger;
 }
+
+.slidePrev{
+position: absolute;
+top: 50%;
+left: 16px;
+font-size: 50px;
+color: #47b6b1;
+z-index: 2;
+}
+
+.slideNext{
+position: absolute;
+top: 50%;
+right: 16px;
+font-size: 50px;
+color: #47b6b1;
+z-index: 2;
+}
+
+.rating-row {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.icon
+{
+color: #47b6b1;
+}
+.icon1
+{
+color: #dee3e8;
+
+}
+.truck
+{
+color: #47b6b1;
+float: right;
+font-size: 150%;
+background-size: contain;
+}
+
+ion-card-title.name.ion-inherit-color.md.hydrated
+{
+font-family: 'Roboto',sans-serif !important;
+font-weight: 200 !important;
+font-size: medium;
+}
+
+
+.price
+{
+float: left;
+color: #bd1e2d !important;
+
+}
+
+.favr
+{
+text-align: end;
+color: rgb(255,0,0);
+font-size: 30px;
+margin-right: 1%;
+
+}
+
+@media (max-width: 767px){
+  .ion-card{
+    border: none;
+  }
+}
+
+
+
+
+
+
+
+
